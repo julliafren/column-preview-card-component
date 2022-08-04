@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+
+    --big-shoulders: 'Big Shoulders Display';
+    --lexend: 'Lexend Deca';
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: 'Big Shoulders Display';
+    font-family: 'Lexend Deca', sans-serif;
+    min-height: 100%;
+    background: hsla(0, 0%, 100%, 0.75);
+}
+
+/* Mains */
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: .4rem;
+    overflow: hidden;
+}
+
+/* Section BG */
+
+.container .sedans{
+    background: var(--Bright-orange);
+}
+.container .suvs{
+    background: var(--Dark-cyan);
+}
+.container .luxury{
+    background: var(--Very-dark-cyan);
+}
+
+/* END */
+
+/* General Style */
+.container .box{
+    width: 280px;
+    height: 400px;
+}
+
+.container .box img{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 50px;
+    height: 30px;
+}
+.container .box h1{
+    color: var(--background-headings-buttons);
+    margin-top: 1rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-family: var(--big-shoulders);
+}
+.container .box p{
+    color: var(--paragraphs);
+    font-size: 15px;
+    font-family: var(--lexend);
+    font-weight: 400;
+    margin: 2rem;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    line-height: 1.5rem;
+    margin-right: 3rem;
+}
+
+.container .box button{
+    background: var(--background-headings-buttons);
+    margin: 1rem;
+    margin-left: 2rem;
+    padding: .8rem 2rem .8rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: .8rem;
+    font-weight: 400;
+    font-family: var(--lexend);
+    width: 145px;
+    height: 50px;
+}
+.container .box button:hover{
+    cursor: pointer;
+    border: 2px solid var(--background-headings-buttons);
+    background: none;
+    color: var(--background-headings-buttons);
+}
+.container .sedans button{
+    color: var(--Bright-orange);
+}
+.container .suvs button{
+    color: var(--Dark-cyan);
+}
+.container .luxury button{
+    color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .flex{
+        height: 100%;
+        margin: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
